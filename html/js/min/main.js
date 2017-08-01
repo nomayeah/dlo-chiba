@@ -1,0 +1,1 @@
+$(function(){$("[name=ranges]").on("change",function(){var n=$("[name=ranges]").val();console.log(n)})});
