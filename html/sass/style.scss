@@ -8,92 +8,190 @@ Version: 1.0
 */
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}body {line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}* {box-sizing: border-box;}img {width: 100%;vertical-align: top;}
 
-html, body {
-  height: 100%;
-  header {
-    height: 35%;
-    h1 {height: 82%;}
-    nav {
-      height: 18%;
-      div, ul {height: 100%;}
-    }
-  }
-  main {height: 55%;}
-  footer {height: 10%;}
+.device-pc{display: block;}
+.device-sp{display: none;}
+
+html, body {line-height: 1.6;
+  // height: 100%;
+  background-color: #e7eef5;font-family: ‒apple‒system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', meiryo, sans‒serif;
+  // header {height: 35%;
+  //   h1 {height: 77.5%;}
+  //   nav {height: 22.5%;
+  //     div, ul {height: 100%;}
+  //   }
+  // }
+  // main {min-height: 55%;}
+  // footer {min-height: 10%;}
 }
 
-h1 {
-  overflow: hidden;
-  position: relative;
-  img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  }
+h1 {overflow: hidden;position: relative;background-color: #fff;
+  img {width: 100%;}
 }
 
-nav ul {
-  display: flex;
-  li {
-    flex: 1;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    &:last-child {border-right: 0;}
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      text-decoration: none;
+nav {background-color: #fff;border-top: 1px solid #cbcbcb;border-bottom: 1px solid #cbcbcb;
+  ul {display: flex;max-width: 1080px;margin: 0 auto;
+    li {flex: 1;border-right: 1px solid #cbcbcb;height: 100%;background: #e9eef4;background: linear-gradient(to bottom, #ffffff 0%,#e2e2e2 100%); 
+      &:first-child {border-left: 1px solid #cbcbcb;}
+      a {display: flex;flex-direction: column;align-items: center;justify-content: center;min-height: 76px;text-decoration: none;
+        span{color: #005bac;font-weight: 700;line-height: 1.3;letter-spacing: 1px;
+          &:last-child{font-size: 13px;font-weight: 100;}
+        }
+      }
     }
   }
 }
 
-main {
-  padding: 30px 10%;
-  h2 {
-    width: 100%;
-    border: 1px solid #ccc;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 40px;
+main {max-width: 1080px;margin: 30px auto;background-color: transparent;
+  > div,section {padding: 24px 12px;background-color: #fff;min-height: 420px;}
+  &.top{ background-color: transparent;
+    div {padding: 0;
+      &.whatsnew {border-radius: 0;border: 0;background-color: #fff;}
+      &.wn-head {border-radius: 0px;border-bottom: 0;box-shadow: 0 0;
+        .wn-title {font-weight: 100;letter-spacing: 1px;text-align: center;padding: 4px 8px;}
+      }
+      &.wn-item {margin: 10px 0;padding: 0 20px;
+        .wn-date {color: #005bac;font-size: 14px;line-height: 25px;}
+        .wn-article {line-height: 25px;
+          a {color: #222;text-decoration: none;font-size: 16px;}
+        }
+      }
+    }
+  }
+  h2 {width: 100%;margin: 0 auto;text-align: center;padding: 10px 0;font-size: 28px;background-color: #0349af;color: #fff;font-weight: 100;
+    &.top-caution {color: #dd2427;background-color: #fff;margin-bottom: 20px;font-size: 18px;}
   }
 }
 
-
-footer {
-  background-color: #ccc;
+footer {background-color: #004097;padding-bottom: 1px;
+  aside {max-width: 1080px;margin: 0 auto;padding: 20px 0;line-height: 2.5;
+    a {color: #fff;font-size: 14px;text-decoration: none;}
+  }
 }
 
-
-
-
-// range.html
-section#select-area {
-    margin-bottom: 30px;
+.wpcf7-validation-errors {
+    display: none !important;
 }
 
 section#range_content {
-  > div {
-    display: none;
-    border: 1px solid #ccc;
-    &.active {
-      display: block;
-    }
+  > div {display: none;
+    &.active {display: block;}
   }
   ul {
-    li {
-      display: none;
+    li {display: none;
       &.active{display: block;}
     }
-    &:nth-of-type(1) {
-      display: flex;
-      li {
-        flex: 1;
-        display: block;
+    &:nth-of-type(1) {display: flex;
+      li {flex: 1;display: block;
+        &.active {display: none;}
       }
     }
+  }
+}
+
+
+#user-entry-form {
+  > div{display: none;
+    &.active {display: block;}
+  }
+}
+.form-text {text-align: center;margin-bottom: 24px;
+  span {
+    &:nth-of-type(1) {display: block;}
+    &:nth-of-type(2) {display: block;}
+    &:nth-of-type(3) {display: block;}
+  }
+}
+ul.form {padding: 20px 0;width: 70%;margin: 0 auto;
+  li {padding-bottom: 20px;
+    &.notes {}
+    label {display: flex;align-items: center;
+      > span {padding: 4px;
+        &:first-child {text-align: right;width: 40%;font-size: 13px;}
+        &:last-child {flex: 1;}
+      }
+      span {
+        input {border: 1px solid #cccccc;border-radius: 4px;padding: 8px 16px;font-size: 14px;
+          &.wpcf7c-conf {background-color: #efefef;}
+        }
+        &.wpcf7-not-valid-tip {font-size: 12px;padding: 4px 2px 0;}
+        &.note {display: block;font-size: 12px;color: #ff0000;padding: 0 4px;}
+      }
+    }
+    &.submit {display: flex;justify-content: center;margin-top: 40px;border-top: 2px solid #e3e3e3;padding: 80px 0 10px;position: relative;
+      &:after {content: "以上の内容で送信します。";display: block;position: absolute;top: 46px;left: 0;right: 0;margin: auto;width: 100%;text-align: center;}
+      input {width: 220px;font-size: 16px;padding: 8px 0;appearance: none;border: 0;border-radius: 4px;margin: 0 4px;}
+      [type=button] {background-color: #adadad;color: #fff;box-shadow: 0 3px 0 0 #838383;}
+      [type=submit] {background-color: #67bf00;color: #fff;box-shadow: 0 3px 0 0 #11882d;}
+    }
+  }
+}
+
+
+.conplate-message p {margin-bottom: 24px;
+    &:last-child {font-weight: 600;}
+}
+.default_btn {width: 220px;font-size: 16px;border-radius: 4px;margin: 0 auto;text-align: center;overflow: hidden;
+  a {display: block;background-color: #004097;color: #fff;text-decoration: none;padding: 12px 0;}
+}
+
+@media screen and (max-width: 760px) {
+  .device-pc{display: none;}
+  .device-sp{display: block;}
+  // html, body {
+  //   header {
+  //     h1 {height: 64%;}
+  //     nav {height: 20%;
+  //       div, ul {height: 100%;}
+  //     }
+  //   }
+  // }
+  nav ul {
+    flex-wrap: wrap;
+    li {border-right: 0px;
+      width: 50%;
+      flex: inherit;
+      // height: 100%;
+      a {min-height: 50px;
+        span:last-child {display: none;}
+      }
+      &:nth-of-type(1) {order: 4;border-left: 0px;}
+      &:nth-of-type(2) {order: 2;}
+      &:nth-of-type(3) {order: 3;border-right: 1px solid #cbcbcb;}
+      &:nth-of-type(4) {order: 1;border-right: 1px solid #cbcbcb;}
+    }
+  }
+   main {padding: 0 24px;
+    h2 {font-size: 18px;}
+    &.top{
+      div {
+        &.wn-head {
+          .wn-title {text-align: left;}
+        }
+        &.wn-item {margin: 12px 0 16px;padding: 0 20px;
+          .wn-date {font-size: 12px;line-height: 20px;}
+          .wn-article {width: 100%;}
+        }
+      }
+    }
+  }
+  ul.form {
+    width: 100%;padding: 24px;
+    li {
+      &.submit {flex-direction: column;align-items: center;
+        [type=button] {order: 2;}
+        [type=submit] {order: 1;margin-bottom: 16px;}
+      }
+      label {
+        align-items: flex-end;flex-wrap: wrap;
+        > span{
+          input {width: 100%;}
+          &:first-child {width: 100%;text-align: left;}
+          &:last-child {width: 100%;}
+        }
+      }
+    }
+  }
+  footer {
+    aside {padding: 20px 24px 40px;line-height: 2;}
   }
 }

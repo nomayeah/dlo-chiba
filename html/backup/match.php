@@ -1,26 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/jquery3.0.0.js"></script>
-	<script src="js/main.js"></script>
-</head>
-<body>
-  <header>
-    <h1><img src="https://placehold.jp/1920x1080.png" alt=""></h1>
-    <nav>
-      <ul>
-        <li><a href="form.html">エントリーする</a></li>
-        <li><a href="range.html">レンジ表</a></li>
-        <li><a href="#">試合状況</a></li>
-        <li><a href="#">会場情報</a></li>
-      </ul>
-    </nav>
-  </header>
+<?php
+/**
+ * Template Name: match Template
+ * Description: A Page Template that adds a sidebar to pages
+ *
+ * @package WordPress
+ */
+
+get_header(); ?>
+
   <main>
+
+    <h2><?php the_title(); ?></h2>
+
     <section id="select-area">
       <form id="range_select" action="range">
         <select name="ranges">
@@ -43,8 +34,11 @@
           <li>決勝トーナメント</li>
         </ul>
         <ul>
-          <li class="active">coming soon...1</li>
-          <li></li>
+          <?php
+            $page_id = 35;
+            $content = get_page($page_id);
+            echo $content->post_content;
+          ?>
         </ul>
       </div>
       <div>
@@ -53,8 +47,11 @@
           <li>決勝トーナメント</li>
         </ul>
         <ul>
-          <li>coming soon...2</li>
-          <li></li>
+          <?php
+            $page_id = 39;
+            $content = get_page($page_id);
+            echo $content->post_content;
+          ?>
         </ul>
       </div>
       <div>
@@ -63,8 +60,11 @@
           <li>決勝トーナメント</li>
         </ul>
         <ul>
-          <li>coming soon...3</li>
-          <li></li>
+          <?php
+            $page_id = 41;
+            $content = get_page($page_id);
+            echo $content->post_content;
+          ?>
         </ul>
       </div>
       <div>
@@ -73,8 +73,11 @@
           <li>決勝トーナメント</li>
         </ul>
         <ul>
-          <li>coming soon...4</li>
-          <li></li>
+          <?php
+            $page_id = 43;
+            $content = get_page($page_id);
+            echo $content->post_content;
+          ?>
         </ul>
       </div>
       <div>
@@ -83,8 +86,11 @@
           <li>決勝トーナメント</li>
         </ul>
         <ul>
-          <li>coming soon...5</li>
-          <li></li>
+          <?php
+            $page_id = 45;
+            $content = get_page($page_id);
+            echo $content->post_content;
+          ?>
         </ul>
       </div>
       <div>
@@ -93,8 +99,11 @@
           <li>決勝トーナメント</li>
         </ul>
         <ul>
-          <li>coming soon...6</li>
-          <li></li>
+          <?php
+            $page_id = 49;
+            $content = get_page($page_id);
+            echo $content->post_content;
+          ?>
         </ul>
       </div>
       <div>
@@ -103,8 +112,11 @@
           <li>決勝トーナメント</li>
         </ul>
         <ul>
-          <li>coming soon...7</li>
-          <li></li>
+          <?php
+            $page_id = 52;
+            $content = get_page($page_id);
+            echo $content->post_content;
+          ?>
         </ul>
       </div>
       <div>
@@ -113,8 +125,11 @@
           <li>決勝トーナメント</li>
         </ul>
         <ul>
-          <li>coming soon...8</li>
-          <li></li>
+          <?php
+            $page_id = 54;
+            $content = get_page($page_id);
+            echo $content->post_content;
+          ?>
         </ul>
       </div>
       <div>
@@ -123,16 +138,15 @@
           <li>決勝トーナメント</li>
         </ul>
         <ul>
-          <li>coming soon...max</li>
-          <li></li>
+          <?php
+            $page_id = 56;
+            $content = get_page($page_id);
+            echo $content->post_content;
+          ?>
         </ul>
       </li>
       </div>
     </section>
+
   </main>
-  <footer>
-    お問い合わせ
-    webエントリー店舗申し込み
-  </footer>
-</body>
-</html>
+<?php get_footer(); ?>
