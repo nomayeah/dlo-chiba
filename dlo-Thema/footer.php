@@ -1,7 +1,9 @@
   <footer>
-    お問い合わせ
-    webエントリー店舗申し込み
+    <aside>
+      <?php wp_nav_menu( array('menu' => 'footer' )); ?>
+    </aside>
   </footer>
+  
   <?php wp_footer(); ?>
 </body>
 </html>

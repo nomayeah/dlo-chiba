@@ -1,15 +1,23 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: top Template
+ * Description: A Page Template that adds a sidebar to pages
+ *
+ * @package WordPress
+ */
+
+get_header(); ?>
 </head>
 <body>
   <?php get_header('inc'); ?>
-<main>
+<main class="top">
 
     <?php 
     if (have_posts()) :
       while (have_posts()) :
         the_post();
     ?>
-    <h2><?php the_title(); ?></h2>
+    <h2 class="top-caution"><?php the_title(); ?></h2>
 
     <div>
       <?php the_content(); ?>

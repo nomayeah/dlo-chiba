@@ -1,5 +1,8 @@
 <?php get_header(); ?>
-  <main>
+</head>
+<body>
+  <?php get_header('inc'); ?>
+<main>
 
     <?php 
     if (have_posts()) :
