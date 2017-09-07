@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+main h2.top-caution {
+    padding: 15px;
+	font-weight: normal;
+}
+
+main ul.form li label span input {
+	padding: 8px;
+}
+
+/* --------------------------------
+ * smart phone
+ * -------------------------------- */
+
+/* --- WebEntry --- */
+@media screen and (max-width: 320px){
+main ul.form {
+	padding: 0;
+}
+
+main ul.form li.submit{
+	margin-top: 24px;
+	padding: 40px 0 10px;
+}
+
+main ul.form li.submit:after {
+	top: 24px;
+}
+}

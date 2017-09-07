@@ -51,7 +51,7 @@ nav ul li a span:last-child { font-size: 13px; font-weight: 100; }
 
 main { max-width: 1080px; margin: 30px auto; background-color: transparent; }
 
-main > div { padding: 24px 12px; background-color: #fff; }
+main > div, main section { padding: 24px 12px; background-color: #fff; min-height: 420px; }
 
 main.top { background-color: transparent; }
 
@@ -83,7 +83,7 @@ footer aside a { color: #fff; font-size: 14px; text-decoration: none; }
 
 .wpcf7-validation-errors { display: none !important; }
 
-section#range_content > div { display: none; border: 1px solid #ccc; }
+section#range_content > div { display: none; }
 
 section#range_content > div.active { display: block; }
 
@@ -139,6 +139,50 @@ ul.form li.submit [type=button] { background-color: #adadad; color: #fff; box-sh
 
 ul.form li.submit [type=submit] { background-color: #67bf00; color: #fff; box-shadow: 0 3px 0 0 #11882d; }
 
+dl.form { padding: 20px 0; width: 70%; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+dl.form dt, dl.form dd { padding-bottom: 20px; }
+
+dl.form dt { width: 40%; text-align: right; padding-right: 12px; }
+
+dl.form dd { width: 60%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+dl.form dd > span { width: 49%; }
+
+dl.form dd > span input { width: 100%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px 16px; font-size: 14px; }
+
+dl.form dd > span input.wpcf7c-conf { background-color: #efefef; }
+
+dl.form dd > span.wpcf7-not-valid-tip { font-size: 12px; padding: 4px 2px 0; }
+
+dl.form dd > span.note { display: block; font-size: 12px; color: #ff0000; padding: 0 4px; }
+
+dl.form.submit { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-top: 40px; border-top: 2px solid #e3e3e3; padding: 80px 0 10px; position: relative; }
+
+dl.form.submit:after { content: "以上の内容で送信します。"; display: block; position: absolute; top: 46px; left: 0; right: 0; margin: auto; width: 100%; text-align: center; }
+
+dl.form.submit input { width: 220px; font-size: 16px; padding: 8px 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: 0; border-radius: 4px; margin: 0 4px; }
+
+dl.form.submit [type=button] { background-color: #adadad; color: #fff; box-shadow: 0 3px 0 0 #838383; }
+
+dl.form.submit [type=submit] { background-color: #67bf00; color: #fff; box-shadow: 0 3px 0 0 #11882d; }
+
+dl.form dt.rating + dd { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+
+dl.form dt.rating + dd > span { width: 15%; position: relative; }
+
+dl.form dt.rating + dd > span:before, dl.form dt.rating + dd > span:after { content: ""; display: block; }
+
+dl.form dt.rating + dd > span:before { width: 16px; height: 16px; background-color: #0349af; position: absolute; top: 0; bottom: 0; right: 6px; margin: auto; border-radius: 50%; }
+
+dl.form dt.rating + dd > span:after { width: 6px; height: 6px; border-bottom: 2px solid #fff; border-right: 2px solid #fff; -webkit-transform: rotate(45deg); transform: rotate(45deg); position: absolute; top: 0; bottom: 3px; right: 10px; margin: auto; }
+
+dl.form dt.rating + dd > span:first-child { margin-right: 6px; }
+
+dl.form dt.rating + dd > span:last-child { margin-left: 4px; }
+
+dl.form dt.rating + dd > span select { -webkit-appearance: none; -moz-appearance: none; appearance: none; width: 100%; border: 1px solid #cccccc; background-color: transparent; border-radius: 4px; padding: 8px 16px; font-size: 14px; }
+
 .conplate-message p { margin-bottom: 24px; }
 
 .conplate-message p:last-child { font-weight: 600; }
@@ -154,9 +198,9 @@ ul.form li.submit [type=submit] { background-color: #67bf00; color: #fff; box-sh
   nav ul li a { min-height: 50px; }
   nav ul li a span:last-child { display: none; }
   nav ul li:nth-of-type(1) { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; border-left: 0px; }
-  nav ul li:nth-of-type(2) { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+  nav ul li:nth-of-type(2) { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; border-bottom: 1px solid #cbcbcb; }
   nav ul li:nth-of-type(3) { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; border-right: 1px solid #cbcbcb; }
-  nav ul li:nth-of-type(4) { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; border-right: 1px solid #cbcbcb; }
+  nav ul li:nth-of-type(4) { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; border-right: 1px solid #cbcbcb; border-bottom: 1px solid #cbcbcb; }
   main { padding: 0 24px; }
   main h2 { font-size: 18px; }
   main.top div.wn-head .wn-title { text-align: left; }
@@ -172,3 +216,21 @@ ul.form li.submit [type=submit] { background-color: #67bf00; color: #fff; box-sh
   ul.form li label > span:first-child { width: 100%; text-align: left; }
   ul.form li label > span:last-child { width: 100%; }
   footer aside { padding: 20px 24px 40px; line-height: 2; } }
+
+div#select-area { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: relative; width: 270px; margin: 10px auto 0; }
+
+div#select-area:before, div#select-area:after { content: ""; display: block; }
+
+div#select-area:before { width: 16px; height: 16px; background-color: #0349af; position: absolute; top: 0; bottom: 0; right: 5px; margin: auto; border-radius: 50%; }
+
+div#select-area:after { width: 6px; height: 6px; border-bottom: 2px solid #fff; border-right: 2px solid #fff; -webkit-transform: rotate(45deg); transform: rotate(45deg); position: absolute; top: 0; bottom: 3px; right: 9px; margin: auto; }
+
+div#select-area select { -webkit-appearance: none; -moz-appearance: none; appearance: none; background-color: transparent; padding: 10px; width: 100%; font-size: 15px; }
+
+.form__title { text-align: center; color: #0349af; font-weight: 700; position: relative; margin-top: 30px; }
+
+.form__title:after { content: ""; display: block; width: 70px; border-top: 2px solid #959595; position: absolute; top: -25px; left: 0; right: 0; margin: auto; }
+
+.form__title:first-child { margin-top: 0; }
+
+.form__title:first-child:after { display: none; }
